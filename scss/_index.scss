@@ -1,0 +1,39 @@
+@import "colores";
+@import "fuentes";
+
+/*Img Carousel*/
+.carouselCss {
+    margin: 0 auto;
+    width: 16.875rem;
+}
+
+section {
+    div {
+        div {
+            img {
+                border: solid 1px #9c27b0;
+                border-radius: 0.625rem;    
+            }
+        }
+    }
+}
+
+section {
+    div {
+        div {
+            a {
+                font-style: oblique;
+                color: $color-black;
+                font-size: $fuente-grande;
+            }
+        }
+    }
+}
+
+/*Text Secciones Index*/
+p {
+    margin-right: 6.25rem;
+    margin-left: 6.25rem;
+    padding: 0.625rem;
+    font-size: $fuente-mediana;
+}

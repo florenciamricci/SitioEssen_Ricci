@@ -1,0 +1,16 @@
+@import "colores";
+
+/*Footer*/
+footer {
+    font-style: bold;
+    height: 9.375rem;
+    color: #E91E63;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: $color-white;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    align-self: flex-end;
+    box-shadow: 0.25rem 0 0.625rem $color-black;
+}
