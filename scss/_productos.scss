@@ -1,44 +1,31 @@
 @import "colores";
 @import "fuentes";
+@import "mapas";
+@import "mixins";
 
 /*Estilos Productos*/
+section.productos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 
-div.cardProd {
-    display: inline-block;
-    font-size: 0.938rem;
-    width: 22rem;
-    height: 35rem;
-    border-style: none;
-    border-radius: 0.625rem;
-    margin: 0.625rem;
-    padding: 0.313rem;
-    background-color: #f7e6ed;
-    box-shadow: 0.25rem 0 0.625rem #430c24;
+    div.cardProd {
+        @include estiloCards (#f7e6ed, 0.25rem 0 0.625rem #430c24);
+        display: map-get($cards, mostrar);
+        font-size: 0.938rem;
+        width: map-get($cards, ancho);
+        height: 35rem;
+        border-style: none;
+        border-radius: map-get($cards, bordeRedondeado);
+        margin: map-get($cards, margen);
+        padding: 0.313rem;
 
-    img {
-        display: block;
-        margin: 0 auto;
-        width: 75%;
-        padding: 1.25rem;
-    }
-
-    h2 {
-        display: block;
-        text-align: left;
-        margin-left: 1.25rem;
-        font-size: $fuente-mediana;
-    }
-
-    h3 {
-        display: block;
-        margin-left: 1.875rem;
-        font-size: $fuente-mediana;
-    }
-
-    ul {
-        font-size: 1rem;
-        list-style-type: circle;
-        margin-left: 3.125rem;
-        text-align: left;
+    
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 75%;
+            padding: 1.25rem;
+        }
     }
 }

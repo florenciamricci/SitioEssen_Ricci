@@ -1,3 +1,12 @@
+.centrado {
+  text-align: center; }
+
+.right {
+  text-align: right; }
+
+.subrayado {
+  text-decoration: underline; }
+
 /*Gral*/
 * {
   margin: 0;
@@ -13,12 +22,30 @@ body {
   font-family: 'Poppins', sans-serif; }
 
 a {
-  text-decoration: none !important; }
+  text-decoration: none !important;
+  color: #000000; }
 
 h1 {
-  font-size: 2.8rem;
+  font-size: 4rem;
   color: #ffffff;
   font-style: italic; }
+
+h2 {
+  display: block;
+  text-align: left;
+  margin-left: 1.25rem;
+  font-size: 1.25rem; }
+
+h3 {
+  display: block;
+  margin-left: 1.875rem;
+  font-size: 1.25rem; }
+
+ul {
+  font-size: 1rem;
+  list-style-type: circle;
+  margin-left: 3.125rem;
+  text-align: left; }
 
 .centrado {
   text-align: center; }
@@ -74,6 +101,7 @@ div.header {
         box-shadow: 0 0.25rem 1rem #ffffff;
         transition: all 0.2s ease; }
 
+/*Botones*/
 #botonWhatsapp {
   display: block;
   background-color: #ffffff;
@@ -83,15 +111,27 @@ div.header {
   bottom: 0.625rem;
   left: 1.25rem; }
 
-.botonProd {
-  margin-left: 8rem;
+.boton, .boton--enviar, .boton--masInfo {
+  display: inline-block;
   font-size: 1rem;
   font-weight: bold;
   padding: 0.313rem;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border-style: none;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer; }
+
+.boton--enviar {
+  background-color: #794faf;
+  margin-left: 14rem; }
+
+.boton--masInfo {
   background-color: #ec407a;
-  border-radius: 1rem;
-  border-style: none; }
-  .botonProd a {
+  margin-left: 8rem; }
+  .boton--masInfo a {
     text-decoration: none;
     color: #ffffff; }
 
@@ -149,36 +189,148 @@ p {
   text-decoration: underline; }
 
 /*Estilos Productos*/
-div.cardProd {
-  display: inline-block;
-  font-size: 0.938rem;
-  width: 22rem;
-  height: 35rem;
-  border-style: none;
-  border-radius: 0.625rem;
-  margin: 0.625rem;
-  padding: 0.313rem;
-  background-color: #f7e6ed;
-  box-shadow: 0.25rem 0 0.625rem #430c24; }
-  div.cardProd img {
+section.productos {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+  section.productos div.cardProd {
+    background-color: #f7e6ed;
+    box-shadow: 0.25rem 0 0.625rem #430c24;
+    display: inline-block;
+    font-size: 0.938rem;
+    width: 22rem;
+    height: 35rem;
+    border-style: none;
+    border-radius: 7%;
+    margin: 0.625rem;
+    padding: 0.313rem; }
+    section.productos div.cardProd img {
+      display: block;
+      margin: 0 auto;
+      width: 75%;
+      padding: 1.25rem; }
+
+.centrado {
+  text-align: center; }
+
+.right {
+  text-align: right; }
+
+.subrayado {
+  text-decoration: underline; }
+
+/*Gral*/
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62,5%;
+  /* 10px=0.625rem */
+  font-family: 'Poppins', sans-serif; }
+
+body {
+  background-image: linear-gradient(#f48fb1 45%, #ffffff 55%);
+  font-family: 'Poppins', sans-serif; }
+
+a {
+  text-decoration: none !important;
+  color: #000000; }
+
+h1 {
+  font-size: 4rem;
+  color: #ffffff;
+  font-style: italic; }
+
+h2 {
+  display: block;
+  text-align: left;
+  margin-left: 1.25rem;
+  font-size: 1.25rem; }
+
+h3 {
+  display: block;
+  margin-left: 1.875rem;
+  font-size: 1.25rem; }
+
+ul {
+  font-size: 1rem;
+  list-style-type: circle;
+  margin-left: 3.125rem;
+  text-align: left; }
+
+/*Estilos Recetas*/
+section.recetas {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+  section.recetas div.cardReceta {
+    background-color: #f7e6ed;
+    box-shadow: 0.25rem 0 0.625rem #430c24;
+    display: inline-block;
+    font-size: 1.25rem;
+    width: 22rem;
+    height: 30rem;
+    border-radius: 7%;
+    margin: 0.625rem;
+    padding: 20px; }
+    section.recetas div.cardReceta img {
+      display: block;
+      margin: 0 auto;
+      border-style: hidden;
+      border-radius: 15%; }
+    section.recetas div.cardReceta a {
+      margin-top: 2rem; }
+  section.recetas div.cardRecetaVideo {
+    display: inline-block;
+    font-size: 1.25rem;
+    width: 37.5rem;
+    height: 25rem;
+    border-radius: 7%;
+    margin: 0.625rem;
+    padding: 20px; }
+    section.recetas div.cardRecetaVideo iframe {
+      border-radius: 10px;
+      border-style: hidden; }
+
+/*Receta*/
+section.secRecetas {
+  display: flex;
+  flex-flow: column wrap; }
+  section.secRecetas img {
     display: block;
     margin: 0 auto;
-    width: 75%;
+    border-style: hidden;
+    border-radius: 15%;
     padding: 1.25rem; }
-  div.cardProd h2 {
-    display: block;
-    text-align: left;
-    margin-left: 1.25rem;
-    font-size: 1.25rem; }
-  div.cardProd h3 {
-    display: block;
-    margin-left: 1.875rem;
-    font-size: 1.25rem; }
-  div.cardProd ul {
+  section.secRecetas ol {
     font-size: 1rem;
-    list-style-type: circle;
     margin-left: 3.125rem;
     text-align: left; }
+
+/*Sobre Mi*/
+.aboutMe {
+  display: block;
+  width: 40%;
+  border-radius: 20%;
+  margin: 0 auto; }
+
+/*Equipo*/
+.team {
+  display: block;
+  width: 35%;
+  border-radius: 20%;
+  margin: 0 auto; }
+
+/* Formulario */
+form {
+  padding-left: 12rem; }
+  form fieldset legend {
+    margin-left: 7rem;
+    line-height: 40px; }
+
+.formBox {
+  width: 50%; }
 
 .containerIndex {
   display: grid;
@@ -258,3 +410,234 @@ div.cardProd {
 
 .gridMainContacto {
   grid-area: gridMainContacto; }
+
+.containerIndex {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.58fr 3fr 0.59fr;
+  gap: 5px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "gridHeader gridHeader gridHeader" "gridMain gridMain gridMain" "gridFooter gridFooter gridFooter"; }
+
+.gridHeader {
+  grid-area: gridHeader; }
+
+.gridMain {
+  grid-area: gridMain; }
+
+.gridFooter {
+  grid-area: gridFooter;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 0.5fr 1.5fr 0.5fr;
+  grid-template-areas: ". redes subir"; }
+
+.redes {
+  grid-area: redes;
+  justify-items: center; }
+
+.subir {
+  grid-area: subir;
+  align-self: flex-start;
+  justify-self: flex-end;
+  margin-top: 10px;
+  margin-right: 10px; }
+
+.containerProd {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 130px 2.4fr 0.3fr;
+  gap: 5px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "gridHeader gridHeader gridHeader" "gridMainProd gridMainProd gridMainProd" "gridFooter gridFooter gridFooter"; }
+
+.gridMainProd {
+  grid-area: gridMainProd;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.containerRecetas {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 130px 2.4fr 0.3fr;
+  gap: 5px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "gridHeader gridHeader gridHeader gridHeader gridHeader" ". gridMainRecetas gridMainRecetas gridMainRecetas ." "gridFooter gridFooter gridFooter gridFooter gridFooter"; }
+
+.gridMainRecetas {
+  grid-area: gridMainRecetas; }
+
+.containerSobreMiTeam {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 130px 2.4fr 0.3fr;
+  gap: 5px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "gridHeader gridHeader gridHeader" "gridSobreMiTeam gridSobreMiTeam gridSobreMiTeam" "gridFooter gridFooter gridFooter"; }
+
+.gridSobreMiTeam {
+  grid-area: gridSobreMiTeam; }
+
+.containerContacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 130px 2.4fr 0.3fr;
+  gap: 5px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "gridHeader gridHeader gridHeader" "gridMainContacto gridMainContacto gridMainContacto" "gridFooter gridFooter gridFooter"; }
+
+.gridMainContacto {
+  grid-area: gridMainContacto; }
+
+/* MEDIA QUERIES TABLET */
+@media (max-width: 768px) {
+  .containerIndex {
+    display: grid;
+    grid-template-columns: 0.3fr 2.2fr 0.3fr;
+    grid-template-rows: 0.4fr 2.5fr 0.6fr;
+    grid-template-areas: "gridHeader gridHeader gridHeader" ". gridMain gridMain ." "gridFooter gridFooter gridFooter"; }
+  .menu {
+    height: 310px;
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 25px; }
+  .containerProd {
+    display: grid;
+    grid-template-columns: 0.3fr 2.2fr 0.3fr;
+    grid-template-rows: 0.5fr 2fr 0.1fr;
+    grid-template-areas: "gridHeader gridHeader gridHeader" ". gridMainProd gridMainProd ." "gridFooter gridFooter gridFooter"; }
+  .prodTablet {
+    text-align: center; }
+  .containerSobreMiTeam {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2.5fr 3.3fr 1fr;
+    gap: 5px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "gridHeader gridHeader gridHeader" "gridSobreMiTeam gridSobreMiTeam gridSobreMiTeam" "gridFooter gridFooter gridFooter"; }
+  .containerContacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.4fr 2.4fr 0.75fr;
+    gap: 5px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "gridHeader gridHeader gridHeader" "gridMainContacto gridMainContacto gridMainContacto" "gridFooter gridFooter gridFooter"; }
+  .containerRecetas {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.7fr 2.4fr 0.3fr;
+    gap: 5px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "gridHeader gridHeader gridHeader gridHeader gridHeader" ". gridMainRecetas gridMainRecetas gridMainRecetas ." "gridFooter gridFooter gridFooter gridFooter gridFooter"; }
+  .cardReceta {
+    display: inline-block;
+    font-size: 20px;
+    width: 350px;
+    height: 400px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px; }
+  .cardRecetaVideo {
+    display: inline-block;
+    font-size: 20px;
+    width: 475px;
+    height: 350px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px; }
+  iframe {
+    border-radius: 10px;
+    border-style: hidden;
+    width: 90%; }
+  .imgRecetas {
+    display: block;
+    margin: 0 auto;
+    border-style: hidden;
+    border-radius: 15%;
+    padding: 20px;
+    width: 85%; } }
+
+/* //MEDIA QUERIES MOBILE// */
+@media (max-width: 375px) {
+  .containerIndex {
+    display: grid;
+    grid-template-columns: 0.3fr 2.2fr 0.3fr;
+    grid-template-rows: 0.17fr 2fr 1fr;
+    grid-template-areas: "gridHeader gridHeader gridHeader" ". gridMain gridMain ." "gridFooter gridFooter gridFooter"; }
+  .menu {
+    height: 300px;
+    flex-flow: column nowrap;
+    align-items: center;
+    align-content: space-around;
+    padding: 15px;
+    font-size: 20px; }
+  .gridFooter {
+    grid-area: gridFooter;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "redes subir subir";
+    height: 200px; }
+  .redes {
+    grid-area: redes;
+    display: flex;
+    flex-flow: column nowrap; }
+  .containerProd {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.6fr 2.4fr 1fr;
+    grid-template-areas: "gridHeader gridHeader gridHeader" "gridMainProd gridMainProd gridMainProd" "gridFooter gridFooter gridFooter";
+    align-content: stretch; }
+  .containerRecetas {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.7fr 2.4fr 0.5fr;
+    gap: 5px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "gridHeader gridHeader gridHeader gridHeader gridHeader" ". gridMainRecetas gridMainRecetas gridMainRecetas ." "gridFooter gridFooter gridFooter gridFooter gridFooter"; }
+  .cardReceta {
+    display: inline-block;
+    font-size: 20px;
+    width: 350px;
+    height: 300px;
+    border: solid 1px #9c27b0;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px; }
+  .cardRecetaVideo {
+    display: inline-block;
+    font-size: 20px;
+    width: 475px;
+    height: 350px;
+    border: solid 1px #9c27b0;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px; }
+  iframe {
+    border: solid 1px #9c27b0;
+    border-radius: 10px;
+    border-style: hidden;
+    width: 90%; }
+  .imgRecetas {
+    display: block;
+    margin: 0 auto;
+    border-style: hidden;
+    border-radius: 15%;
+    padding: 20px;
+    width: 85%; }
+  .containerRecetasMobile {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.6fr 2.4fr 0.5fr;
+    gap: 5px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "gridHeader gridHeader gridHeader gridHeader gridHeader" ". gridMainRecetas gridMainRecetas gridMainRecetas ." "gridFooter gridFooter gridFooter gridFooter gridFooter"; }
+  section.recetasMobile h1 {
+    font-size: 25px; }
+  .containerRecetasMobile1 {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2.4fr 0.5fr;
+    gap: 5px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "gridHeader gridHeader gridHeader gridHeader gridHeader" ". gridMainRecetas gridMainRecetas gridMainRecetas ." "gridFooter gridFooter gridFooter gridFooter gridFooter"; } }

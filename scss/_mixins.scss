@@ -1,0 +1,4 @@
+@mixin estiloCards($fondo, $sombra) {
+    background-color: $fondo;
+    box-shadow: $sombra;
+}

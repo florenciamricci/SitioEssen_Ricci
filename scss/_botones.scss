@@ -1,5 +1,7 @@
 @import "colores";
 
+/*Botones*/
+
 #botonWhatsapp {
     display: block;
     background-color: $color-white;
@@ -10,15 +12,31 @@
     left: 1.25rem;
 }
 
-.botonProd {
-    margin-left: 8rem;
+.boton {
+    display: inline-block;
     font-size: 1rem;
     font-weight: bold;
     padding: 0.313rem;
-    background-color: #ec407a;
-    border-radius: 1rem;
-    border-style: none;    
+    color: $color-white;
+    border-radius: 0.5rem;
+    border-style: none;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+}
 
+.boton--enviar {
+    @extend .boton;
+    background-color: #794faf;
+    margin-left: 14rem;
+}
+
+.boton--masInfo {
+    @extend .boton;
+    background-color: #ec407a;
+    margin-left: 8rem;
+    
     a {
         text-decoration: none;
         color: $color-white;
