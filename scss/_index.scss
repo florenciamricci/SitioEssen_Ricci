@@ -31,6 +31,10 @@ section {
                 font-style: oblique;
                 color: $color-black;
                 font-size: $fuente-grande;
+
+                &:hover {
+                    color: $color-black;
+                }
             }
         }
 

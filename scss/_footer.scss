@@ -4,10 +4,10 @@
 footer {
     font-style: bold;
     height: 12rem;
-    color: #E91E63;
+    color: $color-white;
     display: flex;
     flex-flow: row nowrap;
-    background-color: $color-white;
+    background-color: #726DA8;
     justify-content: space-around;
     align-items: flex-end;
     width: 100%;
@@ -18,6 +18,12 @@ footer {
         padding-bottom: 2rem;
         div {
             padding-bottom: 1rem;
+            a {
+                img {
+                    background-color: $color-white;
+                    border-radius: 25%;
+                }
+            }
         }
     }
 }

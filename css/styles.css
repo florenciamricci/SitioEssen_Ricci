@@ -18,7 +18,7 @@ html {
   font-family: 'Poppins', sans-serif; }
 
 body {
-  background-image: linear-gradient(#f48fb1 45%, #ffffff 55%);
+  background-image: linear-gradient(#b6d0f3 45%, #ffffff 55%);
   font-family: 'Poppins', sans-serif; }
 
 a {
@@ -28,7 +28,8 @@ a {
 h1 {
   font-size: 4rem;
   color: #ffffff;
-  font-style: italic; }
+  font-style: italic;
+  padding-top: 1rem; }
 
 h2 {
   display: block;
@@ -407,7 +408,7 @@ header {
 
 div.header {
   width: 100%;
-  background-color: #ec407a;
+  background-color: #A3C4F3;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -475,10 +476,10 @@ div.header {
 footer {
   font-style: bold;
   height: 12rem;
-  color: #E91E63;
+  color: #ffffff;
   display: flex;
   flex-flow: row nowrap;
-  background-color: #ffffff;
+  background-color: #726DA8;
   justify-content: space-around;
   align-items: flex-end;
   width: 100%;
@@ -488,6 +489,9 @@ footer {
     padding-bottom: 2rem; }
     footer div.redes div {
       padding-bottom: 1rem; }
+      footer div.redes div a img {
+        background-color: #ffffff;
+        border-radius: 25%; }
 
 .centrado {
   text-align: center; }
@@ -519,6 +523,8 @@ section div div {
     font-style: oblique;
     color: #000000;
     font-size: 1.875rem; }
+    section div div a:hover {
+      color: #000000; }
 
 section div p {
   margin-right: 6.25rem;
@@ -577,7 +583,7 @@ html {
   font-family: 'Poppins', sans-serif; }
 
 body {
-  background-image: linear-gradient(#f48fb1 45%, #ffffff 55%);
+  background-image: linear-gradient(#b6d0f3 45%, #ffffff 55%);
   font-family: 'Poppins', sans-serif; }
 
 a {
@@ -587,7 +593,8 @@ a {
 h1 {
   font-size: 4rem;
   color: #ffffff;
-  font-style: italic; }
+  font-style: italic;
+  padding-top: 1rem; }
 
 h2 {
   display: block;
@@ -660,12 +667,18 @@ section.secRecetas {
   border-radius: 20%;
   margin: 0 auto; }
 
+main div p {
+  padding: 3rem; }
+
 /*Equipo*/
 .team {
   display: block;
   width: 35%;
   border-radius: 20%;
   margin: 0 auto; }
+
+main div p {
+  padding: 3rem; }
 
 /* Formulario */
 form {

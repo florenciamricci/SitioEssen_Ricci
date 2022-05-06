@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background-image: linear-gradient(#f48fb1 45%, $color-white 55%);
+    background-image: linear-gradient(#b6d0f3 45%, $color-white 55%);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -26,6 +26,7 @@ h1 {
     font-size: 4rem;
     color: $color-white;
     font-style: italic;
+    padding-top: 1rem;
 }
 
 h2 {
