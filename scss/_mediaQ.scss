@@ -1,12 +1,21 @@
+@import "mixins";
+@import "mapas";
 @import "grids";
+
 
 /* MEDIA QUERIES TABLET */
 
 @media (max-width: 768px) {
+    .h1Tablet {
+        text-align: left;
+        padding-left: 3rem;
+        font-size: 1.5rem;
+    }
+
     .containerIndex {
         display: grid;
         grid-template-columns: 0.3fr 2.2fr 0.3fr;
-        grid-template-rows: 0.4fr 2.5fr 0.6fr;
+        grid-template-rows: 0.25fr 3fr 0.72fr;
         grid-template-areas: 
             "gridHeader gridHeader gridHeader"
             ". gridMain gridMain ."
@@ -20,10 +29,15 @@
         font-size: 25px;
     }
 
+    .footer {
+        height: 13rem;
+        width: 112%;
+    }
+
     .containerProd {
         display: grid;
         grid-template-columns: 0.3fr 2.2fr 0.3fr;
-        grid-template-rows: 0.5fr 2fr 0.1fr;
+        grid-template-rows: 0.3fr 2.8fr 0.5fr;
         grid-template-areas: 
             "gridHeader gridHeader gridHeader"
             ". gridMainProd gridMainProd ."
@@ -33,23 +47,23 @@
     .prodTablet {
         text-align: center;
     }
-
+    
     .containerSobreMiTeam {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 2.5fr 3.3fr 1fr;
+        grid-template-rows: 0.4fr 3.3fr 0.6fr;
         gap: 5px 0px;
         grid-auto-flow: row;
         grid-template-areas:
             "gridHeader gridHeader gridHeader"
             "gridSobreMiTeam gridSobreMiTeam gridSobreMiTeam"
             "gridFooter gridFooter gridFooter";
-    }
+        }
     
     .containerContacto {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1.4fr 2.4fr 0.75fr;
+        grid-template-rows: 0.4fr 2.1fr 1fr;
         gap: 5px 0px;
         grid-auto-flow: row;
         grid-template-areas:
@@ -57,57 +71,97 @@
         "gridMainContacto gridMainContacto gridMainContacto"
         "gridFooter gridFooter gridFooter";
     }
+
+    form {
+        padding-left: 3rem;
+    }
+    
+    fieldset {
+        legend {
+            line-height: 2.5rem;
+            margin-left: 0rem !important; 
+        }
+
+        div {
+            label {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: flex-start;
+                align-items: flex-start;
+            }
+        }
+    }
+    
+    .formBox {
+        width: 80%;
+
+        &::placeholder {
+            text-align: justify;
+        }
+    }
+    
+    label.checkbox {
+        width: 20rem;
+    }
     
     .containerRecetas {
         display: grid;
         grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.7fr 2.4fr 0.3fr;
+        grid-template-rows: 0.4fr 2.4fr 0.7fr;
         gap: 5px 0px;
         grid-auto-flow: row;
         grid-template-areas:
-            "gridHeader gridHeader gridHeader gridHeader gridHeader"
-            ". gridMainRecetas gridMainRecetas gridMainRecetas ."
-            "gridFooter gridFooter gridFooter gridFooter gridFooter";
-    }
-
-    .cardReceta {
-        display: inline-block;
-        font-size: 20px;
-        width: 350px;
-        height: 400px;
-        border-radius: 10px;
-        margin: 10px;
-        padding: 20px;
+        "gridHeader gridHeader gridHeader gridHeader gridHeader"
+        ". gridMainRecetas gridMainRecetas gridMainRecetas ."
+        "gridFooter gridFooter gridFooter gridFooter gridFooter";
     }
     
-    .cardRecetaVideo {
-        display: inline-block;
-        font-size: 20px;
-        width: 475px;
-        height: 350px;
-        border-radius: 10px;
-        margin: 10px;
-        padding: 20px;
-    }
-    
-    iframe {
-        border-radius: 10px;
-        border-style: hidden;
-        width: 90%;
-    }
-
-    .imgRecetas {
-        display: block;
-        margin: 0 auto;
-        border-style: hidden;
-        border-radius: 15%;
-        padding: 20px;
-        width: 85%;
+    section.recetas {
+        
+        div.cardReceta {
+            @include estiloCards (#f7e6ed, 0.25rem 0 0.625rem #430c24);
+            display: map-get($cards, mostrar);
+            font-size: 1.25rem;
+            width: map-get($cards, ancho);
+            height: 25rem;
+            border-radius: map-get($cards, bordeRedondeado);
+            margin: map-get($cards, margen);
+            padding: 1.25rem;
+            
+            img {
+                display: block;
+                margin: 0 auto;
+                border-style: hidden;
+                border-radius: 15%;
+                padding: 20px;
+                width: 85%;
+            }
+        }
+        
+        .cardRecetaVideo {
+            display: inline-block;
+            font-size: 20px;
+            width: 475px;
+            height: 350px;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+        }
+        
+        iframe {
+            border-radius: 10px;
+            border-style: hidden;
+            width: 90%;
+        }
     }
 }
 
 /* //MEDIA QUERIES MOBILE// */
 @media (max-width: 375px) {
+    h1 {
+        font-size: 1.5rem;
+    }
     .containerIndex {
         display: grid;
         grid-template-columns: 0.3fr 2.2fr 0.3fr;
@@ -146,7 +200,7 @@
     .containerProd {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.6fr 2.4fr 1fr;
+        grid-template-rows: 0.35fr 4.4fr 1fr;
         grid-template-areas:
         "gridHeader gridHeader gridHeader"
         "gridMainProd gridMainProd gridMainProd"
@@ -156,8 +210,8 @@
 
     .containerRecetas {
         display: grid;
-        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.7fr 2.4fr 0.5fr;
+        grid-template-columns: 0.9fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.3fr 2.4fr 0.7fr;
         gap: 5px 0px;
         grid-auto-flow: row;
         grid-template-areas:
@@ -166,42 +220,43 @@
             "gridFooter gridFooter gridFooter gridFooter gridFooter";
     }
 
-    .cardReceta {
-        display: inline-block;
-        font-size: 20px;
-        width: 350px;
-        height: 300px;
-        border: solid 1px #9c27b0;
-        border-radius: 10px;
-        margin: 10px;
-        padding: 20px;
-    }
+    section.recetas {
+        div.cardReceta {
+            @include estiloCards (#f7e6ed, 0.25rem 0 0.625rem #430c24);
+            display: map-get($cards, mostrar);
+            font-size: 1.25rem;
+            width: map-get($cards, ancho);
+            height: 10rem;
+            border-radius: map-get($cards, bordeRedondeado);
+            margin: map-get($cards, margen);
+            padding: 1.25rem;
     
-    .cardRecetaVideo {
-        display: inline-block;
-        font-size: 20px;
-        width: 475px;
-        height: 350px;
-        border: solid 1px #9c27b0;
-        border-radius: 10px;
-        margin: 10px;
-        padding: 20px;
-    }
+            img {
+                display: block;
+                margin: 0 auto;
+                border-style: hidden;
+                border-radius: 15%;
+                padding: 1.25rem;
+                width: 85%;
+            }
+        }
     
-    iframe {
-        border: solid 1px #9c27b0;
-        border-radius: 10px;
-        border-style: hidden;
-        width: 90%;
-    }
-
-    .imgRecetas {
-        display: block;
-        margin: 0 auto;
-        border-style: hidden;
-        border-radius: 15%;
-        padding: 20px;
-        width: 85%;
+        .cardRecetaVideo {
+            display: inline-block;
+            font-size: 20px;
+            width: 475px;
+            height: 350px;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+        }
+        
+        iframe {
+            border: solid 1px #9c27b0;
+            border-radius: 10px;
+            border-style: hidden;
+            width: 90%;
+        }
     }
 
     .containerRecetasMobile {
@@ -214,12 +269,6 @@
             "gridHeader gridHeader gridHeader gridHeader gridHeader"
             ". gridMainRecetas gridMainRecetas gridMainRecetas ."
             "gridFooter gridFooter gridFooter gridFooter gridFooter";
-    }
-
-    section.recetasMobile {
-        h1 {
-        font-size: 25px;
-        }
     }
 
     .containerRecetasMobile1 {

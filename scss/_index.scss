@@ -4,36 +4,42 @@
 /*Img Carousel*/
 .carouselCss {
     margin: 0 auto;
-    width: 16.875rem;
+    width: 100%;
+} 
+
+div.carousel-caption {
+	background-color: $color-black;
+	opacity: 40%;
 }
+
+/*Text Secciones Index*/
+
 
 section {
     div {
         div {
-            img {
-                border: solid 1px #9c27b0;
-                border-radius: 0.625rem;    
+            display: flex;
+            flex-direction: column;
+
+            i {
+                font-size: 2rem;
+                padding-top: 2rem;
+                color: #000;
             }
-        }
-    }
-}
-
-section {
-    div {
-        div {
+            
             a {
                 font-style: oblique;
                 color: $color-black;
                 font-size: $fuente-grande;
             }
         }
+
+        p {
+            margin-right: 6.25rem;
+            margin-left: 6.25rem;
+            padding: 0.625rem;
+            font-size: $fuente-mediana;
+        }
     }
 }
 
-/*Text Secciones Index*/
-p {
-    margin-right: 6.25rem;
-    margin-left: 6.25rem;
-    padding: 0.625rem;
-    font-size: $fuente-mediana;
-}

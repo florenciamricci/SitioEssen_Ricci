@@ -3,7 +3,7 @@
 /*Footer*/
 footer {
     font-style: bold;
-    height: 9.375rem;
+    height: 12rem;
     color: #E91E63;
     display: flex;
     flex-flow: row nowrap;
@@ -13,4 +13,11 @@ footer {
     width: 100%;
     align-self: flex-end;
     box-shadow: 0.25rem 0 0.625rem $color-black;
+
+    div.redes {
+        padding-bottom: 2rem;
+        div {
+            padding-bottom: 1rem;
+        }
+    }
 }
