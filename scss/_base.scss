@@ -9,12 +9,19 @@
 
 html {
     font-size: 62,5%; /* 10px=0.625rem */
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Pathway Gothic One', sans-serif; 
+}
+
+h1 {
+    font-size: 5rem;
+    color: $color-white;
+    font-family: 'Square Peg', cursive;
+    padding-top: 1rem;
 }
 
 body {
     background-image: linear-gradient(#b6d0f3 45%, $color-white 55%);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Pathway Gothic One', sans-serif;
 }
 
 a {
@@ -22,12 +29,6 @@ a {
     color: $color-black;
 }
 
-h1 {
-    font-size: 4rem;
-    color: $color-white;
-    font-style: italic;
-    padding-top: 1rem;
-}
 
 h2 {
     display: block;
@@ -45,6 +46,10 @@ h3 {
 ul {
     font-size: 1rem;
     list-style-type: circle;
-    margin-left: 3.125rem;
+    margin-left: 2rem;
     text-align: left;
+}
+
+p {
+    font-size: 1.5rem;
 }

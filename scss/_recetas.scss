@@ -17,29 +17,32 @@ section.recetas {
         height: 25rem;
         border-radius: map-get($cards, bordeRedondeado);
         margin: map-get($cards, margen);
-        padding: 20px;
+        padding: 1.25rem;
 
         img {
             display: block;
             margin: 0 auto;
             border-style: hidden;
             border-radius: 15%;
+            padding-bottom: 1rem;
         }
     }
 
     div.cardRecetaVideo {
+        @include estiloCards (#f7e6ed, 0.25rem 0 0.625rem #430c24);
         display: map-get($cards, mostrar);
         font-size: 1.25rem;
-        width: 37.5rem;
+        width: 29.7rem;
         height: 25rem;
-        border-radius: map-get($cards, bordeRedondeado);
+        border-radius: 0.625rem;
         margin: map-get($cards, margen);
-        padding: 20px;
+        padding: 1.25rem;    
+        width: 37.5rem;
         background-color: map-get($cards, fondo);
         box-shadow: map-get($cards, sombra);
 
         iframe {
-            border-radius: 10px;
+            border-radius: 0.625rem;
             border-style: hidden;
         }
     }

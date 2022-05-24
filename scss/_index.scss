@@ -2,16 +2,90 @@
 @import "fuentes";
 
 /*Img Carousel*/
-.carouselCss {
-    margin: 0 auto;
-    width: 100%;
-} 
 
-div.carousel-caption {
-	background-color: $color-black;
-	opacity: 40%;
+section.sectionCarousel {
+
+    div.carousel-item {
+        height: 32rem;
+        position: relative;
+        
+        div.carousel-caption {
+            background: #000;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding-top: 2%;
+            opacity: 0.5;
+
+            h2.h2Slide, p.pSlide {
+                text-align: center;
+                color: $color-white;                
+            }
+
+            h2.h2Slide {
+                font-size: 2rem;
+            }
+        }
+    }
+    
+    div.slide1 {
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../img/carousel/carousel1.webp);
+        background-repeat: no-repeat;
+        max-width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    div.slide2 {
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../img/carousel/carousel2.webp);
+        background-repeat: no-repeat;
+        max-width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    div.slide3 {
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../img/carousel/carousel3.webp);
+        background-repeat: no-repeat;
+        max-width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    div.slide4 {
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../img/carousel/carousel4.webp);
+        background-repeat: no-repeat;
+        max-width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
 }
-
 /*Text Secciones Index*/
 
 

@@ -1,8 +1,8 @@
 @import "colores";
+@import "fuentes";
 
 /*Footer*/
 footer {
-    font-style: bold;
     height: 12rem;
     color: $color-white;
     display: flex;
@@ -13,17 +13,13 @@ footer {
     width: 100%;
     align-self: flex-end;
     box-shadow: 0.25rem 0 0.625rem $color-black;
+    font-size: $fuente-mediana;
 
     div.redes {
         padding-bottom: 2rem;
+        
         div {
             padding-bottom: 1rem;
-            a {
-                img {
-                    background-color: $color-white;
-                    border-radius: 25%;
-                }
-            }
         }
     }
 }

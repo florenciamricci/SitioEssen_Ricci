@@ -14,7 +14,7 @@ section.productos {
         display: map-get($cards, mostrar);
         font-size: 0.938rem;
         width: map-get($cards, ancho);
-        height: 35rem;
+        height: 33rem;
         border-style: none;
         border-radius: map-get($cards, bordeRedondeado);
         margin: map-get($cards, margen);

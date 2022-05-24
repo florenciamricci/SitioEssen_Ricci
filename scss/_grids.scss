@@ -1,5 +1,7 @@
 //GRID GENERAL//
 
+/* GRIDS */
+
 .containerIndex {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -46,7 +48,7 @@
 .containerProd {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.6fr 3fr 1fr;
+    grid-template-rows: 0.3fr 3fr 1fr;
     gap: 5px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -66,7 +68,7 @@
 .containerRecetas {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 130px 2.4fr 0.3fr;
+    grid-template-rows: 0.35fr 2.4fr 0.65fr;
     gap: 5px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -83,7 +85,7 @@
 .containerSobreMiTeam {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 130px 2.4fr 0.3fr;
+    grid-template-rows: 0.35fr 2.4fr 0.7fr;
     gap: 5px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -99,8 +101,8 @@
 //GRID CONTACTO//
 .containerContacto {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.7fr 2.8fr 1.5fr;
+    grid-template-columns: 0.3fr 1fr 0.4fr;
+    grid-template-rows: 0.5fr 2.8fr 1.5fr;
     gap: 5px 0px;
     grid-auto-flow: row;
     grid-template-areas:

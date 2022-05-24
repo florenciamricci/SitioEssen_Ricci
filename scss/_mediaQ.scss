@@ -1,285 +1,243 @@
 @import "mixins";
 @import "mapas";
-@import "grids";
 
 
 /* MEDIA QUERIES TABLET */
 
 @media (max-width: 768px) {
-    .h1Tablet {
-        text-align: left;
-        padding-left: 3rem;
-        font-size: 1.5rem;
+    .containerMedia {
+        display: flex;
+        flex-direction: column;
     }
 
-    .containerIndex {
-        display: grid;
-        grid-template-columns: 0.3fr 2.2fr 0.3fr;
-        grid-template-rows: 0.25fr 3fr 0.72fr;
-        grid-template-areas: 
-            "gridHeader gridHeader gridHeader"
-            ". gridMain gridMain ."
-            "gridFooter gridFooter gridFooter";
+    h1.h1Tablet {
+        padding-left: 3rem;
+        padding-top: 8rem;
+        font-size: 5rem;
     }
     
-    .menu {
-        height: 310px;
+    .footer {
+        height: 12rem;
+        width: 100%;
+    }
+
+    section.recetasTablet {
+
+        div.cardRecetaTablet {
+            height: 21rem;
+                
+            img {
+                padding: 0.1rem;
+                width: 90%;
+            }
+        }
+            
+        iframe {
+            width: 90%;
+        }
+    }
+
+    img.meTablet {
+        width: 70%;
+    }
+
+    img.teamTablet {
+        width: 60%;
+    }
+
+    .secRecetasTablet {
+        h1 {
+            line-height: 5rem;
+        }
+
+        img {
+            width: 65%;
+        }
+
+        h2, h3 {
+            font-size: 1.7rem;
+        }
+
+        ul, .olRecetasTablet {
+            font-size: 1.5rem;
+        }
+    }
+
+    .mainContactoTablet {
         display: flex;
         flex-flow: column nowrap;
-        font-size: 25px;
-    }
 
-    .footer {
-        height: 13rem;
-        width: 112%;
-    }
-
-    .containerProd {
-        display: grid;
-        grid-template-columns: 0.3fr 2.2fr 0.3fr;
-        grid-template-rows: 0.3fr 2.8fr 0.5fr;
-        grid-template-areas: 
-            "gridHeader gridHeader gridHeader"
-            ". gridMainProd gridMainProd ."
-            "gridFooter gridFooter gridFooter";        
-    }
-
-    .prodTablet {
-        text-align: center;
-    }
-    
-    .containerSobreMiTeam {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.4fr 3.3fr 0.6fr;
-        gap: 5px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "gridHeader gridHeader gridHeader"
-            "gridSobreMiTeam gridSobreMiTeam gridSobreMiTeam"
-            "gridFooter gridFooter gridFooter";
+        form {
+            padding-left: 3rem;
+            width: 45rem;
         }
-    
-    .containerContacto {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.4fr 2.1fr 1fr;
-        gap: 5px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-        "gridHeader gridHeader gridHeader"
-        "gridMainContacto gridMainContacto gridMainContacto"
-        "gridFooter gridFooter gridFooter";
-    }
-
-    form {
-        padding-left: 3rem;
-    }
-    
-    fieldset {
-        legend {
-            line-height: 2.5rem;
-            margin-left: 0rem !important; 
-        }
-
-        div {
-            label {
-                display: flex;
-                flex-direction: column;
-                flex-wrap: nowrap;
-                align-content: flex-start;
-                align-items: flex-start;
-            }
-        }
-    }
-    
-    .formBox {
-        width: 80%;
-
-        &::placeholder {
-            text-align: justify;
-        }
-    }
-    
-    label.checkbox {
-        width: 20rem;
-    }
-    
-    .containerRecetas {
-        display: grid;
-        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.4fr 2.4fr 0.7fr;
-        gap: 5px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-        "gridHeader gridHeader gridHeader gridHeader gridHeader"
-        ". gridMainRecetas gridMainRecetas gridMainRecetas ."
-        "gridFooter gridFooter gridFooter gridFooter gridFooter";
-    }
-    
-    section.recetas {
         
-        div.cardReceta {
-            @include estiloCards (#f7e6ed, 0.25rem 0 0.625rem #430c24);
-            display: map-get($cards, mostrar);
-            font-size: 1.25rem;
-            width: map-get($cards, ancho);
-            height: 25rem;
-            border-radius: map-get($cards, bordeRedondeado);
-            margin: map-get($cards, margen);
-            padding: 1.25rem;
+        .fieldsetTablet {
+
+            legend {
+                line-height: 2.5rem;
+                margin-left: 0rem;
+            }
+
+            .formBox {
+                width: 80%;
+        
+                &::placeholder {
+                    text-align: justify;
+                }
+            }
             
-            img {
-                display: block;
-                margin: 0 auto;
-                border-style: hidden;
-                border-radius: 15%;
-                padding: 20px;
-                width: 85%;
+            label.checkbox {
+                width: 20rem;
+                font-size: 1.5rem;
+            }
+
+            button {
+                margin-left: 7rem;
+                width: 5rem;
             }
         }
-        
-        .cardRecetaVideo {
-            display: inline-block;
-            font-size: 20px;
-            width: 475px;
-            height: 350px;
-            border-radius: 10px;
-            margin: 10px;
-            padding: 20px;
+    }
+}
+
+/* //MEDIA QUERIES SMALL// */
+@media (max-width: 575px) {
+    h1.h1Sm {
+        padding-left: 0;
+    }
+
+    form.containerSm {
+        width: 20rem;
+        padding-left: 0.2rem;
+    }
+
+    fieldset.fieldsetSm {
+        legend {
+            font-size: 1.5rem;
         }
-        
-        iframe {
-            border-radius: 10px;
-            border-style: hidden;
-            width: 90%;
+
+        div.formSmall {
+            display: flex;
+            flex-direction: column;
+            
+            div {
+                label {
+                    text-align: left;
+                }
+
+            }
+
+            label.checkSm {
+                width: 15rem;
+                font-size: 1.2rem;
+            }
+
+            button.botonSm {
+                margin-left: 2rem;
+                width: 5rem;
+                margin-bottom: 2rem;
+            }
         }
     }
 }
 
 /* //MEDIA QUERIES MOBILE// */
 @media (max-width: 375px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-    .containerIndex {
-        display: grid;
-        grid-template-columns: 0.3fr 2.2fr 0.3fr;
-        grid-template-rows: 0.17fr 2fr 1fr;
-        grid-template-areas: 
-            "gridHeader gridHeader gridHeader"
-            ". gridMain gridMain ."
-            "gridFooter gridFooter gridFooter"            
-            ;
+    h1.h1Mobile {
+        font-size: 3rem;
+        padding-left: 1rem;
     }
 
-    .menu {
-        height: 300px;
-        flex-flow: column nowrap;
-        align-items: center;
-        align-content: space-around;
-        padding: 15px;
-        font-size: 20px;
-    }
-
-    .gridFooter {
-        grid-area: gridFooter;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-areas:
-            "redes subir subir";
-        height: 200px;
-    }
-
-    .redes {
-        grid-area: redes;
+    footer.footerMobile {
+        height: 8rem;
         display: flex;
-        flex-flow: column nowrap;
-    }
-    
-    .containerProd {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.35fr 4.4fr 1fr;
-        grid-template-areas:
-        "gridHeader gridHeader gridHeader"
-        "gridMainProd gridMainProd gridMainProd"
-        "gridFooter gridFooter gridFooter";
-        align-content: stretch;
-    }
+        padding-left: 1rem;
 
-    .containerRecetas {
-        display: grid;
-        grid-template-columns: 0.9fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.3fr 2.4fr 0.7fr;
-        gap: 5px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "gridHeader gridHeader gridHeader gridHeader gridHeader"
-            ". gridMainRecetas gridMainRecetas gridMainRecetas ."
-            "gridFooter gridFooter gridFooter gridFooter gridFooter";
-    }
-
-    section.recetas {
-        div.cardReceta {
-            @include estiloCards (#f7e6ed, 0.25rem 0 0.625rem #430c24);
-            display: map-get($cards, mostrar);
-            font-size: 1.25rem;
-            width: map-get($cards, ancho);
-            height: 10rem;
-            border-radius: map-get($cards, bordeRedondeado);
-            margin: map-get($cards, margen);
-            padding: 1.25rem;
-    
-            img {
-                display: block;
-                margin: 0 auto;
-                border-style: hidden;
-                border-radius: 15%;
-                padding: 1.25rem;
-                width: 85%;
+        div {
+            div.redesMobile {
+                margin-top: 1.5rem;
+                padding-bottom: 0.5rem;
             }
         }
-    
-        .cardRecetaVideo {
-            display: inline-block;
-            font-size: 20px;
-            width: 475px;
-            height: 350px;
-            border-radius: 10px;
-            margin: 10px;
-            padding: 20px;
-        }
         
-        iframe {
-            border: solid 1px #9c27b0;
-            border-radius: 10px;
-            border-style: hidden;
-            width: 90%;
+        svg.svgMobile {
+            font-size: 2rem !important;
+        }
+    
+        p.pFooterMobile {
+            font-size: 1.2rem;
         }
     }
 
-    .containerRecetasMobile {
-        display: grid;
-        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.6fr 2.4fr 0.5fr;
-        gap: 5px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "gridHeader gridHeader gridHeader gridHeader gridHeader"
-            ". gridMainRecetas gridMainRecetas gridMainRecetas ."
-            "gridFooter gridFooter gridFooter gridFooter gridFooter";
+    section.sectionMobile {
+        div {
+            p.seccionesIndexMobile {
+                margin-right: 1rem;
+                margin-left: 1rem;
+                padding: 1rem;
+            }
+        }
     }
 
-    .containerRecetasMobile1 {
-        display: grid;
-        grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.5fr 2.4fr 0.5fr;
-        gap: 5px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "gridHeader gridHeader gridHeader gridHeader gridHeader"
-            ". gridMainRecetas gridMainRecetas gridMainRecetas ."
-            "gridFooter gridFooter gridFooter gridFooter gridFooter";
+    section.prodMobile {
+        div.cardProdMobile {
+            line-height: 1.2rem;
+            height: 25rem;
+            width: 20rem;
+
+            img {
+                padding: 0;
+                width: 60%;
+            }
+
+            h2.h2Mobile, h3.h3Mobile {
+                font-size: 1rem;
+            }
+
+            ul.ulMobile {
+                font-size: 0.9rem;
+            }
+        }
     }
+
+    section.recetasMobile {
+
+        div.cardRecetaMobile {
+            height: 20rem;
+            width: 18rem;
+            
+            img.imgRecetaMobile {
+                width: 90%;
+                padding-bottom: 1rem;
+            }
+        }
+
+        div.cardRecVidMob {
+            height: 24rem;
+            width: 18rem;
+
+            iframe {
+                width: 80%;
+            }
+        }
+    }
+
+    main {
+        div.textMobile {
+            img {
+                padding-bottom: 1rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                padding: 0.5rem;
+                margin-bottom: 0;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                text-indent: 1rem;
+            }
+        }
+
+    }
+
 }

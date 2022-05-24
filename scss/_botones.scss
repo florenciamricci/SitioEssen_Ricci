@@ -3,10 +3,6 @@
 /*Botones*/
 
 #botonWhatsapp {
-    display: block;
-    background-color: $color-white;
-    border-style: hidden;
-    border-radius: 20%;
     position: fixed;
     bottom: 0.625rem;
     left: 1.25rem;
@@ -14,8 +10,6 @@
 
 .boton {
     display: inline-block;
-    font-size: 1rem;
-    font-weight: bold;
     padding: 0.313rem;
     color: $color-white;
     border-radius: 0.5rem;
@@ -24,18 +18,21 @@
     text-decoration: none;
     vertical-align: middle;
     cursor: pointer;
+    letter-spacing: 0.1rem;
 }
 
 .boton--enviar {
     @extend .boton;
     background-color: #794faf;
     margin-left: 14rem;
+    font-size: 1.2rem;
 }
 
 .boton--masInfo {
     @extend .boton;
     background-color: #ec407a;
     margin-left: 8rem;
+    font-size: 1rem;
     
     a {
         text-decoration: none;
